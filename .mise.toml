@@ -1,0 +1,23 @@
+[tools]
+uv = "0.10.10"
+
+[tasks.setup]
+run = """
+uv sync
+./shell/init.sh
+"""
+
+[tasks.sc]
+run = "./shell/setc.sh"
+
+[tasks.sv]
+run = "./shell/solve.sh"
+
+[tasks.p]
+run = "uv run main.py"
+
+[tasks.f]
+run = "uv run ruff format main.py"
+
+[tasks.l]
+run = "uv run ruff check --fix main.py"
