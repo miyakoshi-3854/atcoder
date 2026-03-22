@@ -2,7 +2,7 @@
 
 ## 📝概要
 
-atcoder用のpython実行環境
+atcoder用 python環境
 
 ## 🛠️環境構築
 
