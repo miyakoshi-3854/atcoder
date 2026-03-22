@@ -1,5 +1,5 @@
 [tools]
-uv = "0.10.10"
+uv = "0.10.12"
 
 [tasks.setup]
 run = """
