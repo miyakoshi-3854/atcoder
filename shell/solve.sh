@@ -34,8 +34,9 @@ git add "$dir/main.py"
 git commit -m "${contest} ${problem}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
-echo -e "${GREEN}🔄 Resetting main.py from template${RESET}"
+echo -e "${GREEN}🔄 Resetting main.py & test.py from template${RESET}"
 cp _template/main.py ./main.py
+cp _template/test.py ./test.py
 
 echo ""
 echo -e "${GREEN}✅ Done: ${contest} ${problem}${RESET}"
