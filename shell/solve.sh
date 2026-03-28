@@ -25,12 +25,23 @@ read problem
 
 dir="_result/${contest}/${problem}"
 
-echo -e "${BLUE}📁 Saving to ${dir}/main.py${RESET}"
 mkdir -p "$dir"
-cp main.py "$dir/main.py"
+
+# 重複チェック: main.py が既に存在する場合は main_2.py, main_3.py ... にする
+dest="$dir/main.py"
+if [ -f "$dest" ]; then
+  n=2
+  while [ -f "$dir/main_${n}.py" ]; do
+    n=$((n + 1))
+  done
+  dest="$dir/main_${n}.py"
+fi
+
+echo -e "${BLUE}📁 Saving to ${dest}${RESET}"
+cp main.py "$dest"
 
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
-git add "$dir/main.py"
+git add "$dest"
 git commit -m "${contest} ${problem}"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
