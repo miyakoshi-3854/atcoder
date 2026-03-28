@@ -17,6 +17,9 @@ run = "./shell/solve.sh"
 [tasks.p]
 run = "uv run main.py"
 
+[tasks.t]
+run = "uv run test.py"
+
 [tasks.f]
 run = "uv run ruff format main.py"
 
