@@ -9,6 +9,7 @@ RESET='\033[0m'
 echo -e "${GREEN}🔄 Initializing atcoder...${RESET}"
 
 cp _template/main.py main.py
+cp _template/test.py test.py
 touch contest
 
 echo -e "${GREEN}✅ Done: atcoder initialized${RESET}"
