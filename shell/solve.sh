@@ -27,13 +27,13 @@ dir="_result/${contest}/${problem}"
 
 mkdir -p "$dir"
 
-# 重複チェック: main.py が既に存在する場合は main_2.py, main_3.py ... にする
 dest="$dir/main.py"
 if [ -f "$dest" ]; then
   n=2
   while [ -f "$dir/main_${n}.py" ]; do
     n=$((n + 1))
   done
+  echo -e "${YELLOW}⚠️  Already exists: ${dir}/main.py → Saving as main_${n}.py${RESET}"
   dest="$dir/main_${n}.py"
 fi
 
@@ -42,7 +42,7 @@ cp main.py "$dest"
 
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 git add "$dest"
-git commit -m "${contest} ${problem}"
+git commit -m "${contest} ${problem} (${dest##*/})"
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
 echo -e "${GREEN}🔄 Resetting main.py & test.py from template${RESET}"
@@ -50,4 +50,4 @@ cp _template/main.py ./main.py
 cp _template/test.py ./test.py
 
 echo ""
-echo -e "${GREEN}✅ Done: ${contest} ${problem}${RESET}"
+echo -e "${GREEN}✅ Done: ${contest}/${problem}/${dest##*/}${RESET}"
