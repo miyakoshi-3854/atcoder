@@ -7,3 +7,4 @@
 n = int(input())
 p = [int(p) for p in input().split()]
 
+print(max(0, max(p[1:])) - p[0] + 1)
