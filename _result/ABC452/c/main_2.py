@@ -2,7 +2,7 @@ from collections import defaultdict
 
 # 入力
 N = int(input())
-A = [0] * N 
+A = [0] * N
 B = [0] * N
 for i in range(N):
     A[i], B[i] = map(int, input().split())

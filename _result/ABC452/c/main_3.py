@@ -2,7 +2,7 @@ from collections import defaultdict
 
 # 入力
 N = int(input())
-A = [0] * N 
+A = [0] * N
 B = [0] * N
 for i in range(N):
     A[i], B[i] = map(int, input().split())
@@ -19,7 +19,7 @@ for s in candidates:
 # Bにくる値をdictにする
 can_place = defaultdict(set)
 unique_keys = set(zip(A, B))
-for (a, b) in unique_keys:
+for a, b in unique_keys:
     for s in by_length[a]:
         can_place[a, b].add(s[b - 1])
 

@@ -3,6 +3,7 @@
 全員着ている服が違う
 m種類の服を最低一枚誰かが着ているか
 """
+
 n, m = map(int, input().split())
 f = [int(f) for f in input().split()]
 

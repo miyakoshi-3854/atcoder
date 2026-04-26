@@ -14,6 +14,7 @@ dictで管理してみるか
 → 複雑にしなくていいはず
 →→ dictであげる:もらうmapを作るべきだった
 """
+
 from collections import defaultdict
 
 _, friends = map(int, input().split())

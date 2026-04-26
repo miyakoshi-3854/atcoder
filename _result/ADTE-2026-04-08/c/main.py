@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 S = [input() for _ in range(N)]
 
-correct_count = 0 
+correct_count = 0
 for i in range(N):
     for j in range(i + 1, N):
         is_valid_pair = True

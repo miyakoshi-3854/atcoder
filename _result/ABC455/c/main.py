@@ -15,6 +15,7 @@ dictをk回0で書き換える
 python 3.11はdefaultdictをimportしないと使えない
 
 """
+
 from collections import defaultdict
 
 # 入力

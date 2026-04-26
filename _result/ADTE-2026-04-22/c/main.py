@@ -15,6 +15,7 @@ x, yにいるN人の中から一番遠い間の距離を求める問題っぽい
 n * (n - 1) の組み合わせの中から一番おおきいもの
 
 """
+
 n, k = map(int, input().split())
 a = [int(_) for _ in input().split()]
 x, y = [], []
