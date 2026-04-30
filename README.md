@@ -1,6 +1,8 @@
 # atcoder
 
-[![miyakoshi-3854's atcoder stats](https://atcoder-readme-stats.vercel.app/stats/miyakoshi_?show_icons=true&width=450)](https://github.com/iwbc-mzk/atcoder-readme-stats)
+<a href="https://atcoder.jp/users/miyakoshi_">
+    <img src="https://atcoder-readme-stats.vercel.app/stats/miyakoshi_?show_icons=true&width=435&height=200" />
+</a>
 
 ## 📝概要
 
