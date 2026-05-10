@@ -4,62 +4,63 @@
     <img src="https://atcoder-readme-stats.vercel.app/stats/miyakoshi_?show_icons=true&width=435&height=200" />
 </a>
 
-## 📝概要
+## Overview
 
-atcoder用 python環境
+Python environment for AtCoder practice.
 
-## 🛠️環境構築
+## Setup
 
-### 1. [`mise`](https://mise.jdx.dev/getting-started.html)をインストールする
+### 1. Install [`mise`](https://mise.jdx.dev/getting-started.html)
 
-### 2. 下記コマンドを実行
+### 2. Run
 
 ```bash
 mise run setup
 ```
 
-## 🚀使い方
+## Usage
 
-### 1. コンテストを設定
+### 1. Set the contest
 
 ```bash
 mise run sc
 ```
 
-コンテスト名を (例: `abc123`) を入力すると `contest` ファイルに保存される
+Enter the contest name (e.g. `abc123`) when prompted. This will be saved to the `contest` file.
 
-### 2. 問題を解く
+### 2. Solve a problem
 
-./main.pyを編集して問題を解く。
+Edit `main.py` and run:
 
 ```bash
 mise run p
 ```
 
-### 3. 回答を保存
+### 3. Save your answer
 
 ```bash
 mise run sv
 ```
 
-問題番号 (例: `a`) を入力すると:
-- `_result/{contest}/{problem}/main.py` に保存
-- 自動で `git commit`
-- `main.py`がテンプレートにリセット
+Enter the problem letter (e.g. `a`) when prompted. This will:
 
-## 📂ディレクトリ構成
+- Save to `_result/{contest}/{problem}/main.py`
+- Commit automatically with git
+- Reset `main.py` to the template
 
-```bash
+## Directory Structure
+
+```
 .
-├── main.py                # 作業用メインファイル
-├── contest                # 現在のコンテスト名
-├── .mise.toml             # 開発ツール管理 (mise)
-├── .pre-commit-config.yaml # コードチェック自動化設定
+├── main.py                  # Working file
+├── contest                  # Current contest name
+├── .mise.toml               # Dev tool config (mise)
+├── .pre-commit-config.yaml  # Pre-commit hooks
 ├── shell/
-│   ├── setc.sh            # コンテスト設定用スクリプト
-│   └── solve.sh           # 解答保存用スクリプト
-├── _template/             # テンプレートファイル格納
-└── _result/               # 解答保存先
+│   ├── setc.sh              # Contest setup script
+│   └── solve.sh             # Save script
+├── _template/               # Template files
+└── _result/                 # Saved answers
     └── {contest}/
         └── {problem}/
             └── main.py
